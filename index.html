@@ -16,10 +16,19 @@
 
         <div v-if="tasks.length === 0">La tua lista è vuota! Complimenti vai a rilassarti</div>
         <ul v-else>
-            <li v-for="task, i in tasks" :key="i">
-                {{ task }}
-                <span @click="removeItem(i)">&#9830</span>
-            </li>
+            <div v-if="tasks.done === true">
+                <li v-for="task, i in tasks" :key="i">
+                    <s>{{ task.text }}</s> 
+                    <span @click="removeItem(i)">&#9830</span>
+                </li>
+            </div>
+
+            <div v-else>
+                <li v-for="task, i in tasks" :key="i">
+                    {{ task.text }}
+                    <span @click="removeItem(i)">&#9830</span>
+                </li>
+            </div>
         </ul>
     </div>
 

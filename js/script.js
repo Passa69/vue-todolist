@@ -14,10 +14,12 @@ var app = new Vue (
             removeItem (index) {
                 this.tasks.splice(index,1);
             },
-            
+
             addTask () {
-                this.tasks.push(this.newTask);
-                this.newTask = "";
+                if(this.newTask.length > 0 && this.newTask[0] !== ' ') {
+                    this.tasks.push(this.newTask);
+                    this.newTask = "";
+                }   
             }
         }
     }

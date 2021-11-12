@@ -1,0 +1,15 @@
+/* general rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#myapp {
+    font-size: 15px;
+    margin: 20px;
+}
+
+#myapp > ul {
+    margin: 15px;
+}

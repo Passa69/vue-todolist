@@ -13,3 +13,7 @@
 #myapp > ul {
     margin: 15px;
 }
+
+.sbarrato {
+    text-decoration: line-through;
+}

@@ -32,22 +32,22 @@ var app = new Vue (
             tasks: [ 
                 {
                     text: "fare la spesa",
-                    done: "true"
+                    done: true
                 },
 
                 {
                     text: "andare in palestra",
-                    done: "false"
+                    done: false
                 },
 
                 {
                     text: "fare il pieno alla macchina",
-                    done: "false"
+                    done: false
                 },
 
                 {
                     text: "lavare il cane",
-                    done: "true"
+                    done: true
                 }  
             ]
         },
@@ -58,7 +58,10 @@ var app = new Vue (
 
             addTask () {
                 if(this.newTask.length > 0 && this.newTask[0] !== ' ') {
-                    this.tasks.push(this.newTask);
+                    this.tasks.push({
+                        text: this.newTask,
+                        done: false
+                    });
                     this.newTask = "";
                 }   
             }

@@ -10,8 +10,8 @@
 <body>
     <div id="myapp">
 
-        <input type="text" v-model="newTask" placeholder="">
-        <button>Aggiungi Task</button>
+        <input type="text" v-model="newTask" placeholder="Aggiungi alla lista">
+        <button @click="addTask">Aggiungi Task</button>
 
         <ul>
             <li v-for="task, i in tasks" :key="i">

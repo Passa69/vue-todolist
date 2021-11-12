@@ -11,8 +11,13 @@ var app = new Vue (
             ]
         },
         methods: {
-            removeItem(index) {
+            removeItem (index) {
                 this.tasks.splice(index,1);
+            },
+            
+            addTask () {
+                this.tasks.push(this.newTask);
+                this.newTask = "";
             }
         }
     }

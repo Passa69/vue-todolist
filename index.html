@@ -10,7 +10,7 @@
 <body>
     <div id="myapp">
 
-        <input type="text" v-model="newTask" placeholder="Aggiungi alla lista">
+        <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Aggiungi alla lista">
         <button @click="addTask">Aggiungi Task</button>
 
 
